@@ -43,7 +43,7 @@ def analyze_query(request: QueryRequest):
         
     elif "fix" in query_lower or "scenario" in query_lower or "optimize" in query_lower:
         # Route to Decision Science Optimization Engine
-        # E.g. trying to recover a $1.2M gap
+        # E.g. trying to recover a ₹1.2L gap
         from engines.optimization import run_scenario_optimization
         scenario_result = run_scenario_optimization(current_margin_gap=120000, baseline_volume=500000)
         response_payload["scenario"] = scenario_result

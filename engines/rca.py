@@ -8,10 +8,10 @@ DATA_PATH = os.path.join(os.path.dirname(__file__), '../data/Target_Foods_Sales_
 
 def format_currency(val):
     if abs(val) >= 1_000_000:
-        return f"${val/1_000_000:.1f}M"
+        return f"₹{val/1_000_000:.1f}M"
     elif abs(val) >= 1_000:
-        return f"${val/1_000:.1f}K"
-    return f"${val:.0f}"
+        return f"₹{val/1_000:.1f}K"
+    return f"₹{val:.0f}"
 
 def calculate_pvm_drivers(df_current, df_prev, dimension):
     """

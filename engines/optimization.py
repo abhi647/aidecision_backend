@@ -44,7 +44,7 @@ def run_scenario_optimization(current_margin_gap: float, baseline_volume: float)
             "status": "Optimal Solution Found",
             "prescription": f"Implement a {optimal_discount:.1f}% discount promotion.",
             "expected_volume_lift": f"+{int(optimal_volume_increase):,} units",
-            "projected_recovery": f"${target_recovery/1000000:.1f}M",
+            "projected_recovery": f"₹{target_recovery/100000:.1f}L",
             "confidence": "High (Mathematically Proven)",
             "action": "Adjust trade spend in TPR (Temporary Price Reduction) system."
         }
